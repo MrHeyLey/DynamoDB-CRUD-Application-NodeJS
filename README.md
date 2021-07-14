@@ -50,7 +50,7 @@ npm run dev
 
 ### Hostname
 ```link
-http://<your ip address, domain or localhost>:<your custome port or default port 3000>
+http://<your ip address or domain>:<your custom port or 3000>
 ```
 
 #### If this repo helps you. don't forget to,
