@@ -1,0 +1,33 @@
+{
+  "name": "dyno_crud",
+  "version": "1.0.0",
+  "description": "DynamoDB Create, Read, Update, Delete Example Application NodeJS",
+  "main": "app.js",
+  "scripts": {
+    "start": "node ./bin/www",
+    "dev": "nodemon ./bin/www"
+  },
+  "keywords": [
+    "dynamodb",
+    "aws",
+    "dynamo",
+    "crud",
+    "nodejs",
+    "dynamoose",
+    "javascript"
+  ],
+  "author": "MrHeyLey",
+  "license": "ISC",
+  "dependencies": {
+    "bootstrap": "^5.0.2",
+    "connect-flash": "^0.1.1",
+    "dynamoose": "^2.7.3",
+    "express": "^4.17.1",
+    "express-session": "^1.17.2",
+    "jquery": "^3.6.0",
+    "nodemon": "^2.0.12",
+    "path": "^0.12.7",
+    "pug": "^3.0.2",
+    "uuid": "^8.3.2"
+  }
+}

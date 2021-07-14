@@ -1,0 +1,34 @@
+extends ./layout 
+
+block content 
+    .row
+        .col
+            include ./alert
+
+            .card 
+                .card-body 
+                    h5.mb-4 All Records
+
+                    table.table.table-striped#records-table
+                        thead 
+                            tr
+                                td Name 
+                                td Email 
+                                td Bio 
+                                td Action
+                        tbody 
+                            each rec in records 
+                                tr 
+                                    td= rec.name
+                                    td= rec.email
+                                    td= rec.bio
+                                    td 
+                                        a.btn.btn-danger.btn-sm.del-btn.me-2(href="/delete/" + rec.id) Delete
+                                        a.btn.btn-warning.btn-sm.del-btn.me-2(href="/update/" + rec.id) Update
+                                        a.btn.btn-info.btn-sm.del-btn(href="/info/" + rec.id) Full info
+                            
+block scripts 
+    script.
+        $(document).ready(function() {
+            $('#records-table').DataTable();
+        });     

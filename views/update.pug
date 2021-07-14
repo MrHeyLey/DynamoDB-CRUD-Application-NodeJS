@@ -1,0 +1,26 @@
+extends ./layout 
+
+block content 
+    .row.justify-content-center
+        .col-md-6
+            include ./alert
+
+            .card 
+                .card-body 
+                    h5.mb-4 Update Record 
+
+                    form(action="/update/" + record.id, method="post") 
+                        .mb-3
+                            label.form-label(for="name") Name
+                            input.form-control#name(type="text" name="name" value= record.name autofocus required)
+
+                        .mb-3
+                            label.form-label(for="email") Email Address
+                            input.form-control#email(type="email" name="email" value= record.email required)
+
+                        .mb-3
+                            label.form-label(for="bio") Biography
+                            textarea.form-control#bio(type="text" name="bio" required)= record.bio
+
+                        button.btn.btn-primary.me-2(type="submit") Update
+                        a.btn.btn-success(href="/") Back

@@ -1,0 +1,33 @@
+extends ./layout 
+
+block content 
+    .row.justify-content-center
+        .col-md-8
+            include ./alert
+
+            .card 
+                .card-body 
+                    h5.mb-4 Record Full Details
+
+                    table.table.table-bordered 
+                        tbody 
+                            tr 
+                                td Index 
+                                td= record.id
+                            tr 
+                                td Name 
+                                td= record.name
+                            tr 
+                                td Email 
+                                td= record.email
+                            tr 
+                                td Bio 
+                                td= record.bio
+                            tr 
+                                td Created At 
+                                td= record.createdAt
+                            tr 
+                                td Updated At 
+                                td= record.updatedAt
+
+                    a.btn.btn-success(href="/") Back
